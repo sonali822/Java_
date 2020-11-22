@@ -1,0 +1,50 @@
+Problem: Given cost of N items and a value sum. The task is to find the maximum number of items that can be purchased using the value sum.
+
+Example:
+Input: costs[] = {1, 12, 5, 111, 200}, sum = 10
+Output: 2
+
+Input: costs[] = {20, 10, 5, 30, 100}, sum = 35
+Output: 3
+
+Solution: The idea is to create a min-heap of the cost array. Since, 
+we need maximum number of items that can be purchased by sum.
+We simply need to extract items from the constructed min heap one by one, and keep on subtracting that value from sum and incrementing count simultaneously.
+
+We can create a min-heap in Java using Priority Queue.
+Implementation:
+import java.util.*;
+public class GFG { 
+    
+    static int purchaseMax(List<Integer> al, int sum)
+    {
+        PriorityQueue<Integer> pq = new PriorityQueue<Integer>(al);
+        
+        int res = 0;
+        
+        while(sum >= 0 && pq.isEmpty()==false && pq.peek()<=sum )
+        {
+            sum = sum - pq.poll();
+            res++;
+        }
+        
+        return res;
+    }
+    
+    public static void main(String[] argv) 
+    {
+        Integer arr[] = {1, 12, 5, 111, 200};
+        
+        List<Integer> al = Arrays.asList(arr);
+        
+        System.out.println(purchaseMax(al, 10));
+    } 
+} 
+
+
+Output:
+2
+
+Time Complexity: O(N*logN)
+Auxiliary Space: O(N)
+
