@@ -1,0 +1,113 @@
+A PriorityQueue is used when the objects are supposed to be processed based on the priority.
+It is known that a queue follows First-In-First-Out algorithm, 
+but sometimes the elements of the queue are needed to be processed according to the priority, 
+that’s when the PriorityQueue comes into play. The PriorityQueue is based on the priority heap. 
+The elements of the priority queue are ordered according to the natural ordering, or by a Comparator provided at queue construction time, 
+depending on which constructor is used.
+
+Few important points on Priority Queue are as follows:
+A PriorityQueue class in Java implements the Heap data structure. By default, it implements a min-Heap data structure.
+
+PriorityQueue doesn’t permit null.
+
+We can’t create PriorityQueue of Objects that are non-comparable
+
+PriorityQueue is unbound queues.
+
+The head of this queue is the least element with respect to the specified ordering. If multiple elements are tied for least value,
+the head is one of those elements — ties are broken arbitrarily.
+
+The queue retrieval operations poll, remove, peek, and element access the element at the head of the queue.
+
+It inherits methods from AbstractQueue, AbstractCollection, Collection and Object class.
+Basic Operations on PriorityQueue:
+boolean add(E element): This method inserts the specified element into this priority queue.
+public peek(): This method retrieves, but does not remove, the head of this queue, or returns null if this queue is empty.
+public poll(): This method retrieves and removes the head of this queue, or returns null if this queue is empty.
+Example 1: Uses the default min-Heap to implement the PriorityQueue.
+
+import java.util.*;
+
+class Test{
+    public static void main(String args[])
+    {
+        // Creating empty priority queue
+        PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
+
+        // Adding items to the pQueue using add()
+        pq.add(10);
+        pq.add(20);
+        pq.add(15);
+        
+        // Above PriorityQueue is stored as following
+        //       10
+        //      /  \
+        //    20    15
+
+        // Printing the top element of PriorityQueue
+        System.out.println(pq.peek());
+
+        // Printing the top element and removing it
+        // from the PriorityQueue container
+        System.out.println(pq.poll());
+
+        // Post poll() PriorityQueue looks like
+        //       15
+        //      /  
+        //    20   
+
+        // Printing the top element again
+        System.out.println(pq.peek());
+    }
+}
+Output:
+10
+10
+15
+
+Example 2: Uses the max-Heap to implement the PriorityQueue.
+
+
+// Java program to demonstrate working of
+// PriorityQueue in Java
+import java.util.*;
+
+class Test{
+    public static void main(String args[])
+    {
+        // Creating empty priority queue
+        PriorityQueue<Integer> pq 
+        = new PriorityQueue<Integer>(
+            Collections.reverseOrder());
+
+        // Adding items to the pQueue using add()
+        pq.add(10);
+        pq.add(20);
+        pq.add(15);
+        
+        // Above PriorityQueue is stored as following
+        //       20
+        //      /  \
+        //    10    15
+
+        // Printing the top element of PriorityQueue
+        System.out.println(pq.peek());
+
+        // Printing the top element and removing it
+        // from the PriorityQueue container
+        System.out.println(pq.poll());
+
+        // Post poll() PriorityQueue looks like
+        //       15
+        //      /  
+        //    10   
+
+        // Printing the top element again
+        System.out.println(pq.peek());
+    }
+}
+
+Output:
+20
+20
+15
