@@ -1,0 +1,19 @@
+java is an object-oriented language as a language that has the object oriented features java supports the following fundamental concepts:
+->polymorphism
+->Inheritance
+->Encapsulation
+->Abstraction
+->Classes
+->objects
+->method
+Java is power packed with ample of features, Here are some of the most important features of Java Programming Language:
+Simple - Java was designed for professional developers to learn and use easily .
+If you are aware of basic programming principles, then Java is not a hard nut to crack.
+Secure - Java achieve security by confining Java Programs to Java Execution Environment 
+and not allowing Java programs to access other parts of the computer system.
+Portable - Portable code must run on variety of operating systems , CPU’s , browsers .
+When Java program is compiled, a Bytecode is generated, 
+this bytecode can be executed on any platform using JVM ( Java Virtual Machine ). 
+We will discuss JVM details in the later part of the tutorial.
+Object Oriented - Java provides a clean, usable, pragmatic approach to objects, 
+it was designed on the principle that “Everything under the sun is Object.”
