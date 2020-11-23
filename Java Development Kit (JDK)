@@ -1,0 +1,4 @@
+Java Development Kit (in short JDK) is Kit which provides the environment to develop and execute.
+The JDK contains a private Java Virtual Machine (JVM), 
+interpreter/loader (java), a compiler (javac), an archiver (jar), a documentation generator (Javadoc), etc. 
+to complete the development of a Java Application.
