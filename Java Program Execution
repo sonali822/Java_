@@ -1,0 +1,4 @@
+Java Program Execution - Java program execution is completed with the help of the following tools.
+Classloader - It loads the class file for JVM execution.
+Bytecode Verifier - It verifies the bytecode and restrict objects for illegal access of other part of the system.
+Interpreter - It read the bytecode instructions and execute it line by line.
